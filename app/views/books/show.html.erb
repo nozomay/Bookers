@@ -1,3 +1,10 @@
+<% if flash[:notice] %>
+  <div class="alert alert-primary" role="alert">
+    <%= notice %>
+  </div>
+<% end %>
+<p>
+<br>
 <h4>Title</h4>
 <p><%= @book.title %></p>
 <h4>Body</h4>
