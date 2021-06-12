@@ -9,7 +9,7 @@
      </tr>
     </thead>
     <tbody>
-     <%= @books.each do |book| %>
+     <% @books.each do |book| %>
      <tr>
       <td><%= book.title %></td>
       <td><%= book.body %></td>
@@ -27,8 +27,8 @@
    <% if @book.errors.any? %>
    <div>
     <div id="error_explanation">
-    <ul style = "color: red">
-     <%= @book.errors.count %>error prohibited this book from being saved:
+     <h2><%= @book.errors.count %>error prohibited this book from being saved:</h2>
+    <ul>
      <% @book.errors.full_messages.each do |message| %>
       <li><%= message %></li>
      <% end %>
